@@ -1,0 +1,189 @@
+=== Community Anchor Institutions (CAI) ===
+Total number of institutions: 75188
+
+=== Statistical Description of Numerical Columns ===
+           LATITUDE     LONGITUDE        CAICAT
+count  7.518800e+04  7.518800e+04  75188.000000
+mean   2.626035e+04 -8.099692e+04      3.267436
+std    3.366521e+05  1.035540e+06      1.696491
+min    0.000000e+00 -1.382648e+07      1.000000
+25%    3.395621e+01 -1.216446e+02      3.000000
+50%    3.429239e+01 -1.185669e+02      3.000000
+75%    3.774025e+01 -1.179483e+02      3.000000
+max    5.127405e+06  1.069635e+01      7.000000
+
+=== Categorical Value Distributions ===
+
+Top values in column 'ANCHORNAME':
+ANCHORNAME
+KINDERCARE LEARNING CENTER                         216
+TUTOR TIME CHILD CARE/LEARNING CENTER               43
+CHILDTIME CHILDREN'S CENTER                         43
+FAMILY HEALTHCARE NETWORK                           38
+ADVENTIST HEALTH REEDLEY                            37
+OMNI FAMILY HEALTH                                  37
+Lincoln Elementary                                  33
+UNITED HEALTH CENTERS OF THE SAN JOAQUIN VALLEY     33
+LA PETITE ACADEMY                                   30
+Washington Elementary                               29
+
+Top values in column 'ADDRESS':
+ADDRESS
+U                               874
+14545 FRIAR ST                  176
+Unknown/Did not provide          40
+225 E BROADWAY                   37
+12444 VICTORY BLVD               36
+2985 Bear Street, Building A     31
+4119 W BURBANK BLVD              30
+5130 Riverside Drive             30
+PO Box 307                       30
+PO Box 32                        29
+
+Top values in column 'CITY':
+CITY
+LOS ANGELES      2698
+SAN DIEGO        1600
+SACRAMENTO       1266
+SAN JOSE         1157
+VAN NUYS          944
+FRESNO            881
+Los Angeles       881
+SAN FRANCISCO     855
+GLENDALE          761
+BAKERSFIELD       639
+
+Top values in column 'STATECODE':
+STATECODE
+CA    75126
+
+Top values in column 'ZIP5':
+ZIP5
+U        934
+91401    320
+91411    305
+92691    272
+91405    256
+91205    231
+91335    227
+91606    207
+94533    197
+93257    196
+
+Top values in column 'ZIP4':
+ZIP4
+M       131
+2397    128
+1008     48
+2122     37
+3199     35
+2203     27
+1901     26
+2020     24
+1810     24
+0001     23
+
+Top values in column 'BBSERVICE':
+BBSERVICE
+U    65715
+Y     9473
+
+Top values in column 'PublicWifi':
+PublicWifi
+U    75188
+
+Top values in column 'URL':
+URL
+U                               63474
+No Data                          3430
+Unknown/Did not provide           457
+http://www.fusd.net                45
+http://www.vusd.org                42
+http://www.pusd.org                38
+http://www.compton.k12.ca.us       36
+http://www.dsusd.us                36
+http://www.fcusd.org               34
+http://www.nmusd.us                32
+
+Top values in column 'FULLFIPSID':
+FULLFIPSID
+060371283031001    189
+060373020021003     40
+060371238001006     38
+060371283031002     37
+060373018011000     33
+060371394021001     32
+060373023012000     32
+060371235201007     31
+060371394011001     29
+060371310231012     29
+
+Top values in column 'CAIID':
+CAIID
+1611196933150    1
+1611196154640    1
+1611436138290    1
+1611430117000    1
+1611276138040    1
+1611196979140    1
+1611196973080    1
+1611436928770    1
+1611436972720    1
+1611196204700    1
+
+Top values in column 'CAIType':
+CAIType
+Child Care Centers                             13769
+Public Schools                                 10628
+National Shelter System Facilities              8147
+Elderly Residential Care                        7442
+Adult Residential Facilities                    7054
+Healthcare Facilities - HOME HEALTH AGENCY      3352
+Healthcare Facilities - HOSPICE                 3052
+Healthcare Facilities - PRIMARY CARE CLINIC     2995
+Fire Stations                                   2325
+Private Schools                                 2086
+
+Top values in column 'ConProvide':
+ConProvide
+Unknown/Did not provide     66243
+AT&T                         2961
+Crown Castle                 1256
+Spectrum (TWC & Charter)     1159
+Comcast                       888
+Cox                           553
+Frontier                      341
+Local ISP                     337
+Privately owned by LEA        234
+Internal Fiber                211
+
+Top values in column 'ConType':
+ConType
+Unknown/Did not provide            65721
+Terrestrial Point-to-Multipoint     4476
+Terrestrial Point-to-Point          4360
+Commercial/Residential               355
+Wireless Point-to-Point              271
+Wireless Point-to-Multipoint           2
+Cellular                               2
+Satellite                              1
+
+Top values in column 'ConMedium':
+ConMedium
+Unknown/Did not provide    65721
+Fiber Optic                 8908
+Copper/DSL                   283
+Wireless                     276
+
+Top values in column 'ConSpeed':
+ConSpeed
+Unknown/Did not provide    65157
+1000000                     4329
+10000000                    1975
+100000                      1212
+155000                       578
+0                            502
+500000                       254
+2000000                      248
+10000                        188
+45000                        151
