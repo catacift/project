@@ -1,22 +1,35 @@
-import os
 import pandas as pd
+import matplotlib.pyplot as plt
 
-folder_path = r"C:\Users\Catalina Cifuentes H\Downloads\Electricityconsumption"
-file_to_load = "sales2023.xlsx"  # Change if the name has uppercase letters or spaces
-file_path = os.path.join(folder_path, file_to_load)
+# Full file path
+file_path = r'C:\Users\Catalina Cifuentes H\OneDrive\Desktop\sales2023.xlsx'
 
-# Open workbook to see sheets
-excel_workbook = pd.ExcelFile(file_path)
+# Read the file with multiple header rows (3 rows)
+df = pd.read_excel(file_path, header=[0, 1, 2])
 
-print("Sheets in the file:")
-print(excel_workbook.sheet_names)
+# Flatten hierarchical columns and clean names
+df.columns = [' '.join([str(i).strip() for i in col if str(i) != 'nan']) for col in df.columns]
 
-# Load the first sheet
-sheet_name = excel_workbook.sheet_names[0]
-df = pd.read_excel(file_path, sheet_name=sheet_name)
+# Print the flattened columns to confirm
+print("Flattened columns:\n", df.columns.tolist())
 
-print(f"\nFirst rows of the sheet '{sheet_name}':")
-print(df.head())
+# Filter necessary columns
+state_col = [col for col in df.columns if 'State' in col][0]
+sales_col = [col for col in df.columns if 'TOTAL Sales Megawatthours' in col][0]
 
-print("\nStatistical summary:")
-print(df.describe(include='all'))
+# Group by state and sum sales
+df_grouped = df.groupby(state_col)[sales_col].sum().sort_values(ascending=False)
+
+# Print summary
+print("\nTotal sales by state:\n", df_grouped)
+
+# Plot
+plt.figure(figsize=(12, 6))
+df_grouped.plot(kind='bar', color='skyblue')
+plt.title('Total Electricity Sales by State (MWh)')
+plt.ylabel('Megawatt-hours')
+plt.xlabel('State')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.grid(axis='y', linestyle='--', alpha=0.7)
+plt.show()
