@@ -31,16 +31,19 @@ plt.tight_layout()
 plt.savefig(os.path.join(output_dir, 'scatter_latitude_wind_speed.png'))
 plt.close()
 
-# 3. Boxplot: Wind Speed by State
-plt.figure(figsize=(12,6))
-df.boxplot(column='wind_speed', by='State', grid=False, rot=45)
-plt.title('Wind Speed by State')
-plt.suptitle('')  # Remove automatic subtitle
-plt.xlabel('State')
-plt.ylabel('Wind Speed (m/s)')
+# 3. Boxplot
+plt.figure(figsize=(16, 8))
+df.boxplot(column='wind_speed', by='State', grid=False)
+plt.title('Wind Speed by State', fontsize=16)
+plt.suptitle('')
+plt.xlabel('State', fontsize=14)
+plt.ylabel('Wind Speed (m/s)', fontsize=14)
+plt.xticks(rotation=90, fontsize=10)
+plt.yticks(fontsize=12)
 plt.tight_layout()
-plt.savefig(os.path.join(output_dir, 'boxplot_wind_speed_by_state.png'))
-plt.close()
+plt.savefig(os.path.join(output_dir, 'boxplot_wind_speed_by_state_improved.png'))
+plt.show()
+
 
 # 4. Geospatial plot of sites colored by Wind Speed
 gdf = gpd.GeoDataFrame(df, geometry=gpd.points_from_xy(df.longitude, df.latitude))
